@@ -6,3 +6,5 @@ public class CasualTop implements Top{
         return "Casual Top";
     }
 }
+
+//CasualTop class for Casual Tops. Has method to describe product.

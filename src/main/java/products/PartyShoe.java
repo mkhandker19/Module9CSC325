@@ -6,3 +6,5 @@ public class PartyShoe implements Shoe{
         return "Party Shoe";
     }
 }
+
+//PartyShoe class for Party Shoes. Has method to describe product.

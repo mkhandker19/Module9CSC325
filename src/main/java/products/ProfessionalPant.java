@@ -6,3 +6,6 @@ public class ProfessionalPant implements Pant{
         return "Professional Pant";
     }
 }
+
+
+//ProfessionalPant class for Professional Pants. Has method to describe product.

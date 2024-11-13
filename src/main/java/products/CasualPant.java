@@ -6,3 +6,5 @@ public class CasualPant implements Pant{
         return "Casual Pant";
     }
 }
+
+//CasualPant class for Casual Pants. Has method to describe product.

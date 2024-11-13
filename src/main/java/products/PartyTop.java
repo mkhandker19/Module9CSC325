@@ -6,3 +6,5 @@ public class PartyTop implements Top{
         return "Party Top";
     }
 }
+
+//PartyTop class for Party Tops. Has method to describe product.

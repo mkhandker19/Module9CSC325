@@ -6,3 +6,6 @@ public class ProfessionalTop implements Top {
         return "Professional Top";
     }
 }
+
+
+//ProfessionalTop class for Professional Tops. Has method to describe product.

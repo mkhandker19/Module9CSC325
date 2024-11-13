@@ -6,3 +6,5 @@ public class ProfessionalShoe implements Shoe{
         return "Professional Shoe";
     }
 }
+
+//ProfessionalShoe class for Professional Shoes. Has method to describe product.
