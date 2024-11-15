@@ -1,41 +1,37 @@
-// GarmentSimulatorFX.java
-package garmentsimulator;
+package com.example.module9csc325;
 
-import garmentsimulator.factories.GarmentFactory;
-import garmentsimulator.factories.ProfessionalFactory;
-import garmentsimulator.factories.CasualFactory;
-import garmentsimulator.factories.PartyFactory;
-import garmentsimulator.products.Top;
-import garmentsimulator.products.Pant;
-import garmentsimulator.products.Shoe;
-import javafx.application.Application;
-import javafx.scene.Scene;
+import products.Top;
+import products.Pant;
+import products.Shoe;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-public class Controller extends Application {
-    @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("Garment Simulator");
+public class Controller {
 
-        ComboBox<String> styleComboBox = new ComboBox<>();
+    @FXML
+    private ComboBox<String> styleComboBox;
+
+    @FXML
+    private Label topLabel;
+
+    @FXML
+    private Label pantLabel;
+
+    @FXML
+    private Label shoeLabel;
+
+    @FXML
+    public void initialize() {
+        // Populate ComboBox with style options
         styleComboBox.getItems().addAll("Professional", "Casual", "Party");
 
-        Label topLabel = new Label("Top: ");
-        Label pantLabel = new Label("Pant: ");
-        Label shoeLabel = new Label("Shoe: ");
-
-        VBox root = new VBox(10, styleComboBox, topLabel, pantLabel, shoeLabel);
-        Scene scene = new Scene(root, 300, 200);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+        // Handle style selection
         styleComboBox.setOnAction(event -> {
             String selectedStyle = styleComboBox.getValue();
             GarmentFactory factory;
 
+            // Choose the factory based on the selected style
             switch (selectedStyle) {
                 case "Professional":
                     factory = new ProfessionalFactory();
@@ -50,6 +46,7 @@ public class Controller extends Application {
                     factory = null;
             }
 
+            // Update labels if a valid factory is selected
             if (factory != null) {
                 Top top = factory.createTop();
                 Pant pant = factory.createPant();
@@ -59,9 +56,5 @@ public class Controller extends Application {
                 shoeLabel.setText("Shoe: " + shoe.getDescription());
             }
         });
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
