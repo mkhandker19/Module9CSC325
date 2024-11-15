@@ -23,3 +23,5 @@ public class CasualFactory implements GarmentFactory {
         return new CasualShoe();
     }
 }
+
+//This is the casual factory and will have only casual garments.

@@ -23,15 +23,15 @@ public class Controller {
 
     @FXML
     public void initialize() {
-        // Populate ComboBox with style options
+        // This will allow the user to see the Style options. There are 3 of them.
         styleComboBox.getItems().addAll("Professional", "Casual", "Party");
 
-        // Handle style selection
+
         styleComboBox.setOnAction(event -> {
             String selectedStyle = styleComboBox.getValue();
             GarmentFactory factory;
 
-            // Choose the factory based on the selected style
+            // Switch statement added to show the Garment types and based on choice the factory will be chosen.
             switch (selectedStyle) {
                 case "Professional":
                     factory = new ProfessionalFactory();
@@ -46,7 +46,7 @@ public class Controller {
                     factory = null;
             }
 
-            // Update labels if a valid factory is selected
+            // This is the selection the user will see as default
             if (factory != null) {
                 Top top = factory.createTop();
                 Pant pant = factory.createPant();

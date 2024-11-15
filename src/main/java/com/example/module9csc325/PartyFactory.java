@@ -23,3 +23,5 @@ public class PartyFactory implements GarmentFactory {
         return new PartyShoe();
     }
 }
+
+//This is the party factory and will have only party garments.

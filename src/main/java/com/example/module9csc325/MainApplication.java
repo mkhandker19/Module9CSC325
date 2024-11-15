@@ -13,11 +13,11 @@ public class MainApplication extends Application {
         Parent root = loader.load();
 
         primaryStage.setTitle("Garment Simulator");
-        primaryStage.setScene(new Scene(root, 300, 200)); // Adjust size as needed
+        primaryStage.setScene(new Scene(root, 500, 500));
         primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch(args); // Launches the JavaFX application
+        launch(args); //This will launch my application and when you choose a Garment Type all of them will watch.
     }
 }

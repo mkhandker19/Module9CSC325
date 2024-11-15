@@ -23,3 +23,5 @@ public class ProfessionalFactory implements GarmentFactory {
         return new ProfessionalShoe();
     }
 }
+
+//This is the professional factory and will have only professional garments.

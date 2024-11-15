@@ -10,3 +10,5 @@ public interface GarmentFactory {
     Pant createPant();
     Shoe createShoe();
 }
+
+//Garment factory that will initiate the creating on garments.
